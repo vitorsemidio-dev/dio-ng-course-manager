@@ -8,11 +8,14 @@ import { Component, Input, OnChanges } from '@angular/core';
 export class StarComponent implements OnChanges {
   @Input() rating = 0;
 
+  private readonly maxNumberOfStar: number = 5;
+  private readonly baseWidthIcon: number = 74;
+
   starWidth: number;
 
   constructor() {}
 
   ngOnChanges(): void {
-    this.starWidth = (this.rating * 94) / 5;
+    this.starWidth = (this.rating * this.baseWidthIcon) / this.maxNumberOfStar;
   }
 }
