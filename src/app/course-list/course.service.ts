@@ -7,6 +7,10 @@ import { Course } from './course';
 })
 export class CourseService {
   constructor() {}
+
+  retrieveAll(): Course[] {
+    return COURSES;
+  }
 }
 
 var COURSES: Course[] = [
