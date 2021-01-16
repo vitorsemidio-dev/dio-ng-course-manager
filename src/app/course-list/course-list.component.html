@@ -32,10 +32,10 @@
         {{ course.price }}
       </td>
       <td>
-        {{ course.code }}
+        {{ course.code | lowercase }}
       </td>
       <td>
-        {{ course.releaseDate }}
+        {{ course.releaseDate | date: 'dd/MM/yyyy' }}
       </td>
       <td>
         <app-star [rating]="course.rating"> </app-star>
