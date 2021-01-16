@@ -40,7 +40,14 @@
       <td>
         <app-star [rating]="course.rating"> </app-star>
       </td>
-      <td></td>
+      <td>
+        <a
+          class="btn-sm btn-warning"
+          [routerLink]="['/courses/info', course.id]"
+        >
+          <i class="fa fa-edit"></i>
+        </a>
+      </td>
     </tr>
   </tbody>
 </table>
