@@ -21,13 +21,12 @@ export class CourseService {
 
   save(course: Course) {
     if (course.id) {
-      const index = COURSES.findIndex(
-        (courseIterator) => courseIterator.id === course.id,
+      return this.httpClient.put<Course>(
+        `${this.courseUrl}/${course.id}`,
+        course,
       );
-
-      COURSES[index] = course;
     } else {
-      COURSES.push(course);
+      return this.httpClient.post<Course>(`${this.courseUrl}`, course);
     }
   }
 }
