@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { StarComponent } from './star/star.component';
 import { ReplacePipe } from './pipe/replace.pipe';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
-  declarations: [AppComponent, CourseListComponent, StarComponent, ReplacePipe],
+  declarations: [AppComponent, CourseListComponent, StarComponent, ReplacePipe, NavBarComponent],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
