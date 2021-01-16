@@ -20,16 +20,39 @@ Clone este repositório
 $ git clone https://github.com/vitorsemidio-dev/dio-ng-course-manager
 ```
 
+Acesse a pasta
+
+```
+$ cd dio-ng-course-manager
+```
+
 Instale as dependências
 
 ```
 $ npm install
 ```
 
-Rode a aplicação
+⚠️ Ateção: Deve-se rodar o backend!
+
+Acesse a pasta server e instale as dependências
 
 ```
-npm run start
+$ cd server
+$ npm install
+```
+
+Execute o backend
+
+```
+$ npm run start
+# Aplicação estará disponível em http://localhost:3100/api/courses
+```
+
+Rode a aplicação Angular
+
+```
+$ npm run start
+# Aplicação estará disponível em http://localhost:4200
 ```
 
 ## Imagens do Projeto
