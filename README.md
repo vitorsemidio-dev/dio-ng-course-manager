@@ -1,27 +1,37 @@
-# DioCourseManager
+# Gerenciador de Cursos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+> ## Sobre o projeto
 
-## Development server
+Sistema gerenciador de cursos desenvolvido em Angular durante um dos cursos da [DIO](https://web.digitalinnovation.one/tracks).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+O projeto possui algumas rotas para listagem dos cursos. Também sendo possível a edição ou remoção de alguns.
 
-## Code scaffolding
+Foram utilizados diversos recursos que o Angular nos oferece para construção da aplicação. Para navegação entre rotas e manter-se uma SPA, o módulo de roteamento [RouterModule](https://angular.io/api/router/RouterModule) ofereceu diretivas, serviços, etc para que isso fosse possível.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Pipes nativos já disponíveis e criação de novos foram integrados ao projeto. Utilização de diretivas como `*ngFor` para trabalhar com loops ou `*ngIf` para renderização condicional não faltaram no projeto.
 
-## Build
+As informações exibidas e manipuladas na aplição são fornecidas por uma API. E utilizando o módulo [HttpClientModule](https://angular.io/api/common/http/HttpClientModule) foi possível aplicar os 4 verbos http e realizar o CRUD.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Como rodar o projeto?
 
-## Running unit tests
+Clone este repositório
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+$ git clone https://github.com/vitorsemidio-dev/dio-ng-course-manager
+```
 
-## Running end-to-end tests
+Instale as dependências
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+$ npm install
+```
 
-## Further help
+Rode a aplicação
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+npm run start
+```
+
+## Imagens do Projeto
+
+![Lista de Cursos](.github/project-image.png)
