@@ -13,13 +13,6 @@ export class CourseListComponent implements OnInit {
   _courses: Course[] = [];
   _filterBy: string = '';
 
-  constructor(private courseService: CourseService) {}
-
-  ngOnInit() {
-    this._courses = this.courseService.retrieveAll();
-    this.filteredCourses = this._courses;
-  }
-
   set filter(value: string) {
     this._filterBy = value.trim().toLowerCase();
 
@@ -30,5 +23,35 @@ export class CourseListComponent implements OnInit {
 
   get filter() {
     return this._filterBy;
+  }
+
+  constructor(private courseService: CourseService) {}
+
+  ngOnInit() {
+    this.retrieveAll();
+  }
+
+  retrieveAll() {
+    this.courseService.retrieveAll().subscribe({
+      next: (courses) => {
+        this._courses = courses;
+        this.filteredCourses = this._courses;
+      },
+      error: (err) => {
+        console.error(err);
+      },
+    });
+  }
+
+  deleteById(id: number) {
+    this.courseService.deleteById(id).subscribe({
+      next: () => {
+        console.log('Deleted with success');
+        this.retrieveAll();
+      },
+      error: (err) => {
+        console.error(err);
+      },
+    });
   }
 }
