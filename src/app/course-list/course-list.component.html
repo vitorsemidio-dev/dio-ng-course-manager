@@ -32,7 +32,7 @@
         {{ course.price }}
       </td>
       <td>
-        {{ course.code | lowercase }}
+        {{ course.code | lowercase | replace: '-':' ' }}
       </td>
       <td>
         {{ course.releaseDate | date: 'dd/MM/yyyy' }}
