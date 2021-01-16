@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import { ReplacePipe } from './../pipe/replace.pipe';
-import { StarComponent } from './../star/star.component';
 import { CourseInfoComponent } from './course-info/course-info.component';
 import { CourseListComponent } from './course-list/course-list.component';
 
 import { CourseRoutingModule } from './course-routing.module';
-import { FormsModule } from '@angular/forms';
+
+import { PipeModule } from './../shared/pipe/pipe.module';
+import { StarModule } from './../shared/components/star/star.module';
 
 @NgModule({
-  declarations: [
-    CourseInfoComponent,
-    CourseListComponent,
-
-    StarComponent,
-    ReplacePipe,
+  declarations: [CourseInfoComponent, CourseListComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    StarModule,
+    PipeModule,
+    CourseRoutingModule,
   ],
-  imports: [CommonModule, FormsModule, CourseRoutingModule],
 })
 export class CourseModule {}
