@@ -11,6 +11,14 @@ export class CourseService {
   retrieveAll(): Course[] {
     return COURSES;
   }
+
+  retrieveById(id: number): Course | undefined {
+    const courseFound = COURSES.find(
+      (courseIterator) => courseIterator.id === id,
+    );
+
+    return courseFound;
+  }
 }
 
 var COURSES: Course[] = [
